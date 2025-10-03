@@ -148,7 +148,7 @@ export default function PaymentLink() {
                     <p className="text-indigo-400 text-sm">Create a payment link for someone else to receive funds</p>
                   </div>
                 ) : (
-                  <TransferAPT presetRecipient={walletAddress} presetAmount={amount} presetMemo={memo} />
+                  <TransferAPT />
                 )}
               </CardContent>
             </Card>
