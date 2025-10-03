@@ -10,7 +10,6 @@ import {
   FiArrowUpRight,
   FiArrowDownLeft,
   FiPercent,
-  FiClock,
   FiZap,
   FiPieChart,
 } from "react-icons/fi";
@@ -20,10 +19,10 @@ import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 
 export default function Lending() {
-  const { connected, account, wallet, network } = useWallet();
+  const { connected } = useWallet();
 
   // Mock lending data - in real app, this would come from smart contracts
-  const [lendingPools, setLendingPools] = useState([
+  const [lendingPools] = useState([
     {
       id: 1,
       asset: "APT",
@@ -53,7 +52,7 @@ export default function Lending() {
     },
   ]);
 
-  const [borrowPositions, setBorrowPositions] = useState([
+  const [borrowPositions] = useState([
     {
       id: 1,
       asset: "APT",
@@ -218,7 +217,7 @@ export default function Lending() {
           { label: "Total Borrowed", value: "$38.2M", icon: FiDollarSign, change: "+8%" },
           { label: "Available Liquidity", value: "$18.2M", icon: FiUsers, change: "+15%" },
           { label: "Average APY", value: "6.8%", icon: FiPercent, change: "+2%" },
-        ].map((stat, index) => (
+        ].map((stat) => (
           <Card key={stat.label} className="bg-black border border-gray-800 hover:border-indigo-500 transition-all">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">

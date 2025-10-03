@@ -1,6 +1,6 @@
 // pages/Trading.tsx
 import { motion } from "framer-motion";
-import { FiTrendingUp, FiTrendingDown, FiBarChart2, FiDollarSign } from "react-icons/fi";
+import { FiTrendingUp, FiTrendingDown } from "react-icons/fi";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

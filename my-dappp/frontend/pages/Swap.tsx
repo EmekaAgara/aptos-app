@@ -16,7 +16,7 @@ const TOKENS = [
 ];
 
 export default function Swap() {
-  const { connected, account } = useWallet();
+  const { connected } = useWallet();
   const [fromToken, setFromToken] = useState(TOKENS[0]);
   const [toToken, setToToken] = useState(TOKENS[1]);
   const [fromAmount, setFromAmount] = useState("");
@@ -26,17 +26,18 @@ export default function Swap() {
   const [showSettings, setShowSettings] = useState(false);
 
   // Mock swap rate - in real app, this would come from Tapp.Exchange
+  const rates: Record<string, number> = {
+    "APT-USDC": 6.78,
+    "USDC-APT": 0.147,
+    "APT-USDT": 6.75,
+    "USDT-APT": 0.148,
+    "APT-TAPP": 100,
+    "TAPP-APT": 0.01,
+    "USDC-USDT": 0.999,
+    "USDT-USDC": 1.001,
+  };
+
   const getSwapRate = () => {
-    const rates = {
-      "APT-USDC": 6.78,
-      "USDC-APT": 0.147,
-      "APT-USDT": 6.75,
-      "USDT-APT": 0.148,
-      "APT-TAPP": 100,
-      "TAPP-APT": 0.01,
-      "USDC-USDT": 0.999,
-      "USDT-USDC": 1.001,
-    };
     return rates[`${fromToken.symbol}-${toToken.symbol}`] || 1;
   };
 
@@ -360,7 +361,7 @@ export default function Swap() {
                     description: "Uncollateralized instant loans for arbitrage",
                     status: "Beta",
                   },
-                ].map((hook, index) => (
+                ].map((hook) => (
                   <div
                     key={hook.name}
                     className="p-3 bg-black  rounded-lg border border-gray-800 hover:border-indigo-500 transition-colors"

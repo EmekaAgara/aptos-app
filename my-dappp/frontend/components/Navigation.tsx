@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
-import { FiHome, FiSend, FiBarChart2, FiDollarSign, FiTrendingUp, FiUser, FiMenu, FiX, FiGlobe } from "react-icons/fi";
+import { FiHome, FiSend, FiDollarSign, FiUser, FiMenu, FiX, FiGlobe } from "react-icons/fi";
 import { WalletSelector } from "./WalletSelector";
 
 export function Navigation() {
