@@ -48,7 +48,7 @@ export default function Dashboard() {
                     </div> */}
                   </button>
                   <Link
-                    to="/remittance"
+                    to="/"
                     className="flex items-center justify-center border border-indigo-500 text-indigo-400 hover:bg-purple-500/10 px-8 py-4 rounded font-medium transition-all"
                   >
                     Learn More
@@ -175,7 +175,7 @@ export default function Dashboard() {
             <h2 className="text-xl font-semibold mb-4 text-white">Quick Actions</h2>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: FiSend, label: "My Wallet", path: "/remittance", color: "gray-500" },
+                { icon: FiSend, label: "My Wallet", path: "/wallet", color: "gray-500" },
                 { icon: FiArrowUpRight, label: "Trade Crypto", path: "/wallet", color: "from-green-500 to-blue-500" },
                 { icon: FiArrowDownLeft, label: "Swap Crypto", path: "/wallet", color: "from-orange-500 to-red-500" },
                 {
@@ -213,7 +213,7 @@ export default function Dashboard() {
                 Your transaction history will appear here once you start using AptosPay
               </p>
               <Link
-                to="/remittance"
+                to="/"
                 className="inline-flex text-white items-center mt-4 px-6 py-3 bg-indigo-600  hover:from-purple-700 hover:to-blue-700 rounded-lg font-medium transition-all shadow-lg hover:shadow-purple-500/20"
               >
                 <FiSend className="w-4 h-4 mr-2" />
